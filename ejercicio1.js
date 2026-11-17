@@ -1,0 +1,1 @@
+console.log("Hola mundo, estoy trabajando con JavaScript");
