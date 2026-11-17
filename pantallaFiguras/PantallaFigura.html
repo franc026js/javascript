@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pantalla de figuras</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 40px 16px;
+            background: #d3d3d3;
+            color: #222;
+            font-family: Arial, sans-serif;
+        }
+
+        .ventana {
+            width: 100%;
+            max-width: 440px;
+            margin: 0 auto;
+            border: 1px solid #555;
+            background: #e5e5e5;
+            box-shadow: 3px 3px 0 #888;
+        }
+
+        .barra-superior {
+            padding: 10px 12px;
+            background: #1769aa;
+            color: white;
+            font-weight: bold;
+        }
+
+        .contenido {
+            padding: 18px;
+        }
+
+        label {
+            display: block;
+            margin: 12px 0 5px;
+        }
+
+        input,
+        select {
+            box-sizing: border-box;
+            width: 100%;
+            padding: 7px;
+            border: 1px solid #888;
+            background: white;
+            font: inherit;
+        }
+
+        button {
+            margin-top: 18px;
+            padding: 7px 18px;
+            border: 1px solid #777;
+            background: #ededed;
+            font: inherit;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <main class="ventana">
+        <div class="barra-superior">Pantalla de figuras</div>
+        <div class="contenido">
+            <form id="formulario" onsubmit="return enviarFormulario();">
+                <label for="figura">Figura geométrica:</label>
+                <select id="figura" name="figura">
+                    <option value="">Seleccione una figura</option>
+                </select>
+
+                <div id="campos"></div>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </main>
+
+    <script type="text/javascript">
+        var figuras = ["Cuadrado", "Rectángulo", "Triángulo", "Círculo", "Polígono"];
+        var camposPorFigura = {
+            "Cuadrado": ["Nombre", "Lado"],
+            "Rectángulo": ["Nombre", "Base", "Altura"],
+            "Triángulo": ["Nombre", "Base", "Altura"],
+            "Círculo": ["Nombre", "Radio"],
+            "Polígono": ["Nombre", "Lado", "Número de lados", "Apotema"]
+        };
+        var selector = document.getElementById("figura");
+
+        for (var i = 0; i < figuras.length; i++) {
+            var opcion = document.createElement("option");
+            opcion.value = figuras[i];
+            opcion.textContent = figuras[i];
+            selector.appendChild(opcion);
+        }
+
+        function mostrarCampos() {
+            var contenedor = document.getElementById("campos");
+            var campos = camposPorFigura[selector.value] || [];
+            contenedor.innerHTML = "";
+
+            for (var i = 0; i < campos.length; i++) {
+                var etiqueta = document.createElement("label");
+                var entrada = document.createElement("input");
+                var idEntrada = "campo" + i;
+
+                etiqueta.htmlFor = idEntrada;
+                etiqueta.textContent = campos[i] + ":";
+                entrada.id = idEntrada;
+                entrada.name = campos[i];
+                entrada.type = campos[i] === "Nombre" ? "text" : "number";
+
+                if (entrada.type === "number") {
+                    entrada.step = "any";
+                }
+
+                contenedor.appendChild(etiqueta);
+                contenedor.appendChild(entrada);
+            }
+        }
+
+        function enviarFormulario() {
+            alert("Formulario enviado.");
+            return false;
+        }
+
+        selector.onchange = mostrarCampos;
+    </script>
+</body>
+</html>

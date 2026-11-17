@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Operadores de asignación</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var a = 33;
+        var b = 10;
+        var linebreak = "<br />";
+        var result;
+
+        document.write("Value of a => (a = b) => ");
+        result = (a = b); // Asigna b a a.
+        document.write(result);
+        document.write(linebreak);
+
+        document.write("Value of a => (a += b) => ");
+        result = (a += b); // Suma b a a y guarda el resultado en a.
+        document.write(result);
+        document.write(linebreak);
+
+        document.write("Value of a => (a -= b) => ");
+        result = (a -= b); // Resta b a a y guarda el resultado en a.
+        document.write(result);
+        document.write(linebreak);
+
+        document.write("Value of a => (a *= b) => ");
+        result = (a *= b); // Multiplica a por b y guarda el resultado en a.
+        document.write(result);
+        document.write(linebreak);
+
+        document.write("Value of a => (a /= b) => ");
+        result = (a /= b); // Divide a por b y guarda el resultado en a.
+        document.write(result);
+        document.write(linebreak);
+
+        document.write("Value of a => (a %= b) => ");
+        result = (a %= b); // Guarda en a el resto de dividir a por b.
+        document.write(result);
+    </script>
+</body>
+</html>

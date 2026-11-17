@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Control de flujo 4: switch-case</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var grade = "A";
+
+        document.write("Entering switch block<br />");
+        switch (grade) {
+            case "A":
+                document.write("<b>Good job</b><br />");
+                break;
+            case "B":
+                document.write("<b>Pretty good</b><br />");
+                break;
+            case "C":
+                document.write("<b>Passed</b><br />");
+                break;
+            case "D":
+                document.write("<b>Not so good</b><br />");
+                break;
+            case "F":
+                document.write("<b>Failed</b><br />");
+                break;
+            default:
+                document.write("<b>Unknown grade</b><br />");
+        }
+        document.write("Exiting switch block");
+    </script>
+    <p>Set the variable to different value and then try...</p>
+</body>
+</html>

@@ -1,1 +1,1 @@
-console.log("Hola mundo, estoy trabajando con JavaScript");
+console.log("Hola mundo, estoy trabajando con JavaScript, supuestamente esto es como una pruena de javascript, pero no estoy seguro de que sea así, ya que no tengo mucha experiencia con este lenguaje de programación, pero bueno, vamos a ver que pasa con este código y si funciona correctamente o no, espero que sí, pero bueno, vamos a darle una oportunidad a este código y ver qué pasa. ");

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Control de flujo 5: switch sin break</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var grade = "A";
+
+        document.write("Entering switch block<br />");
+        switch (grade) {
+            // Sin break, la ejecución continúa por los siguientes casos.
+            case "A":
+                document.write("<b>Good job</b><br />");
+            case "B":
+                document.write("<b>Pretty good</b><br />");
+            case "C":
+                document.write("<b>Passed</b><br />");
+            case "D":
+                document.write("<b>Not so good</b><br />");
+            case "F":
+                document.write("<b>Failed</b><br />");
+            default:
+                document.write("<b>Unknown grade</b><br />");
+        }
+        document.write("Exiting switch block");
+    </script>
+    <p>Sin break, se ejecutan también los casos siguientes al que coincide.</p>
+</body>
+</html>

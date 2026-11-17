@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Operadores lógicos</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var a = true;
+        var b = false;
+        var linebreak = "<br />";
+        var result;
+
+        document.write("(a && b) => ");
+        result = (a && b); // Da true solamente si ambos valores son true.
+        document.write(result);
+        document.write(linebreak);
+
+        document.write("(a || b) => ");
+        result = (a || b); // Da true si al menos uno de los valores es true.
+        document.write(result);
+        document.write(linebreak);
+
+        document.write("!(a && b) => ");
+        result = (!(a && b)); // Niega el resultado de la operación AND.
+        document.write(result);
+    </script>
+</body>
+</html>

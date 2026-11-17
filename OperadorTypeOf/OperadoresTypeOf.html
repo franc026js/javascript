@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Operador typeof</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var a = 10;
+        var b = "String";
+        var linebreak = "<br />";
+        var result;
+
+        result = (typeof b == "string" ? "B is String" : "B is Numeric");
+        // typeof b devuelve "string", por eso se muestra B is String.
+        document.write("Result => ");
+        document.write(result);
+        document.write(linebreak);
+
+        result = (typeof a == "string" ? "A is String" : "A is Numeric");
+        // typeof a devuelve "number", por eso se muestra A is Numeric.
+        document.write("Result => ");
+        document.write(result);
+    </script>
+</body>
+</html>
